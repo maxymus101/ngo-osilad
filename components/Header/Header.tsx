@@ -1,25 +1,36 @@
+"use client";
+
 import Image from "next/image";
 import css from "./Header.module.css";
+import Link from "next/link";
+import { useState } from "react";
+import Menu from "../Menu/Menu";
+
 export default function Header() {
+  const [sideBarOpen, setSideBarOpen] = useState(false);
   return (
     <header className={css.header}>
-      <div className={css.header_logo}>
+      <Link href="/" className={css.header_logo}>
         <Image
-          src="/public/cropped-logo_org1.png"
+          src="/cropped-logo_org1.png"
           alt="ГО ОСІЛАД logo"
-          width={100}
-          height={50}
+          width={95}
+          height={95}
         />
+      </Link>
+      <div className={css.desktopMenu}>
+        <Menu />
       </div>
-      <nav className={css.main_nav}>
-        <ul>
-          <li className={css.nav_item}>Головна</li>
-          <li className={css.nav_item}>Громадська організація</li>
-          <li className={css.nav_item}>Про нас</li>
-          <li className={css.nav_item}>Контакти</li>
-          <li className={css.nav_item}>Новини</li>
-        </ul>
-      </nav>
+      <button
+        className={css.burgerButton}
+        type="button"
+        aria-label="Відкрити меню"
+        onClick={() => setSideBarOpen(!sideBarOpen)}
+      >
+        <svg width="32" height="32" aria-hidden="true" focusable="false">
+          <use href="/icons.svg#burger-menu" />
+        </svg>
+      </button>
     </header>
   );
 }

@@ -1,39 +1,27 @@
 import css from "./Footer.module.css";
-import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className={css.footer}>
-      <div className={css.container}>
+      <div className={css.wrapper}>
         <div className={css.socials_group}>
           <div className={css.social_icon}>
+            <svg width="32" height="32" aria-hidden="true" focusable="false">
+              <use href="/icons.svg#yt-ic" />
+            </svg>
+          </div>
+          <div className={css.social_icon}>
             <figure>
-              <Image
-                src="/public/icons.svg#fb-ic"
-                alt="Facebook group"
-                width={32}
-                height={32}
-              />
+              <svg width="32" height="32" aria-hidden="true" focusable="false">
+                <use href="/icons.svg#fb-ic" />
+              </svg>
             </figure>
           </div>
           <div className={css.social_icon}>
             <figure>
-              <Image
-                src="/public/icons.svg#yt-ic"
-                alt="YouTube channel"
-                width={32}
-                height={32}
-              />
-            </figure>
-          </div>
-          <div className={css.social_icon}>
-            <figure>
-              <Image
-                src="/public/icons.svg#viber-ic"
-                alt="Viber group"
-                width={32}
-                height={32}
-              />
+              <svg width="32" height="32" aria-hidden="true" focusable="false">
+                <use href="/icons.svg#viber-ic" />
+              </svg>
             </figure>
           </div>
         </div>

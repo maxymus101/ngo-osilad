@@ -1,0 +1,22 @@
+/* .main_nav {
+
+} */
+
+.nav_list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+
+    font-family: var(--font-noto-sans);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.nav_list_item>a {
+    cursor: pointer;
+}
+
+.nav_list_item>a:hover {
+    color: var(--dark-blue);
+    transition: color 0.3s ease-in-out;
+}

@@ -1,8 +1,11 @@
 .header {
-    min-width: 280px;
-    max-width: 320px;
-    margin: 0 auto;
-    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+    padding: 16px 24px;
+    background-color: var(--light-blue);
 }
 
 .header_logo {
@@ -10,5 +13,42 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+
+}
+
+.desktopMenu {
+    display: none;
+}
+
+.burgerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+
+@media (min-width: 1024px) {
+    .header {
+        justify-content: space-between;
+        padding: 32px 48px;
+    }
+
+    .desktopMenu {
+        display: block;
+    }
+
+    .burgerButton {
+        display: none;
+    }
+}
+
+@media (min-width: 1280px) {
+    .header {
+        padding: 32px 80px;
+    }
 }
