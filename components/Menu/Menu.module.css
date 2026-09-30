@@ -1,15 +1,13 @@
-/* .main_nav {
-
-} */
-
 .nav_list {
     display: flex;
     flex-direction: row;
+    align-items: center;
     column-gap: 40px;
 
     font-family: var(--font-noto-sans);
     font-weight: 600;
     font-size: 18px;
+    text-align: center;
 }
 
 .nav_list_item>a {

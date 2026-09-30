@@ -1,23 +1,43 @@
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     column-gap: 10px;
-    padding: 16px 24px;
-    background-color: var(--light-blue);
+
+    margin: 0 auto;
+    width: 100%;
+    background-color: var(--medium-light-blue);
+    position: relative;
 }
 
-.header_logo {
+.header_wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    column-gap: 145px;
+    padding: 16px 0;
 
 }
 
 .desktopMenu {
     display: none;
+}
+
+.donateButton {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+
+    background-color: var(--dark-blue);
+    color: var(--beige-light);
+    border-radius: 8px;
+
+    width: 120px;
+    height: 40px;
 }
 
 .burgerButton {
@@ -32,10 +52,10 @@
 }
 
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     .header {
         justify-content: space-between;
-        padding: 32px 48px;
+        padding: 16px 40px;
     }
 
     .desktopMenu {
@@ -47,8 +67,4 @@
     }
 }
 
-@media (min-width: 1280px) {
-    .header {
-        padding: 32px 80px;
-    }
-}
+@media screen and (min-width: 1440px) {}

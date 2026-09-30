@@ -1,0 +1,154 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero_img_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--white) 100%);
+    z-index: 1;
+}
+
+.hero_img {
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+
+.hero_content {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    z-index: 2;
+}
+
+.hero_title {
+    width: 100%;
+    text-align: left;
+}
+
+.hero_title>h1 {
+    margin-bottom: 180px;
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--dark-blue);
+}
+
+.decor_line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--dark-blue);
+    margin-top: 10px;
+}
+
+.hero_title>h2 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.event_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+    padding: 8px;
+
+    background-color: var(--dark-blue);
+    border-radius: 8px;
+}
+
+.event_link a {
+    font-size: 22px;
+}
+
+@media screen and (min-width: 425px) {
+    .hero_title>h1 {
+        margin-bottom: 230px;
+        font-size: 30px;
+    }
+
+    .event_link {
+        height: 45px;
+    }
+
+    .event_link>a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero_content {
+        top: 33%;
+        max-width: 752px;
+        padding: 0 40px;
+    }
+
+    .hero_title>h1 {
+        text-align: left;
+        font-size: 40px;
+    }
+
+    .event_link {
+        width: 316px;
+        margin-top: 25px;
+    }
+
+    .event_link>a {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero_content {
+        top: 30%;
+        max-width: 1080px;
+        padding: 0 60px;
+    }
+
+    .hero_title>h1 {
+        font-size: 48px;
+        margin-bottom: 200px;
+    }
+
+    .hero_title>h2 {
+        font-size: 20px;
+    }
+
+    .event_link {
+        width: 380px;
+        height: 45px;
+        margin-top: 45px;
+    }
+
+    .event_link>a {
+        font-size: 24px;
+    }
+}
